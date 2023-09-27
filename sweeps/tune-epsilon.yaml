@@ -1,0 +1,20 @@
+name: tune-epsilon
+project: I2F
+command:
+- ${interpreter}
+- ${program}
+- "--baseline=run"
+- "--num_inversion_batches=5"
+- "--tv_loss=0"
+- "--dataset=mnist"
+- "--model=LeNet"
+- "--inv_goal=l2"
+- ${args}
+method: grid
+parameters:
+  regu:
+    values:
+      - 0.1
+      - 1
+      - 10
+program: demos/codes/tune_epsilon.py

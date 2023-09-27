@@ -1,0 +1,21 @@
+name: invert-initialization
+project: I2F
+command:
+- ${interpreter}
+- ${program}
+- "--baseline=run"
+- "--num_inversion_batches=5"
+- "--tv_loss=0"
+- "--dataset=mnist"
+- "--model=LeNet"
+- "--inv_goal=l2"
+- ${args}
+method: grid
+parameters:
+  init:
+    values:
+      - kaiming
+      - uniform
+      - xavier
+      - normal
+program: demos/codes/invert_initializations.py

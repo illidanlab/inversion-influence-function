@@ -1,0 +1,26 @@
+name: bound-pruning
+project: I2F
+command:
+- ${interpreter}
+- ${program}
+- "--baseline=run"
+- "--num_inversion_batches=5"
+- "--tv_loss=0"
+- "--dataset=mnist"
+- "--model=LeNet"
+- "--inv_goal=l2"
+- ${args}
+method: grid
+parameters:
+  ratio:
+    values:
+      - 0.1
+      - 0.2
+      - 0.3
+      - 0.4
+      - 0.5
+      - 0.6
+      - 0.7
+      - 0.8
+      - 0.9
+program: demos/codes/bound_pruning.py
