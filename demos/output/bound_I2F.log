@@ -1,0 +1,10 @@
+# comment: Hyperparams to generate this log file.
+# model: ResNet152
+# dataset: ImageNet
+# inv goal: sim (GS attack)
+# noise variance: 1e-5
+
+JtDelta: 3.1117875576019287 | MaxEigenValue: 233940.328125 | MSE: 1.906517505645752| vgg: 0.3236 | SSIM: 0.0298 
+JtDelta: 0.0009778261883184314 | MaxEigenValue: 0.05089091509580612 | MSE: 1.824655532836914| vgg: 0.4682 | SSIM: 0.0136 
+JtDelta: 0.008394598960876465 | MaxEigenValue: 5.743559837341309 | MSE: 9.332043647766113| vgg: 0.3826 | SSIM: -0.1135
+JtDelta: 1.5450042486190796 | MaxEigenValue: 1575092.75 | MSE: 2.2121741771698| vgg: 0.2771 | SSIM: 0.0204

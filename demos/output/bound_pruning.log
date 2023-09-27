@@ -1,0 +1,11 @@
+# comment: Hyperparams to generate this log file.
+# model: LeNet
+# dataset: MNIST
+# pruning ratio: 0.4
+# inv goal: sim (GS attack)
+
+JtDelta: 0.01304 | MaxEigenValue: 2.716 | MSE: 0.0002234 | vgg: 0.01557 | SSIM: 0.9932
+JtDelta: 0.009288 | MaxEigenValue: 3.556 | MSE: 0.0001925 | vgg: 0.005507 | SSIM: 0.995
+JtDelta: 0.01025 | MaxEigenValue: 4.151 | MSE: 0.0002027 | vgg: 0.03 | SSIM: 0.9846
+JtDelta: 0.01186 | MaxEigenValue: 2.363 | MSE: 0.0003214 | vgg: 0.01153 | SSIM: 0.9939
+JtDelta: 0.007975 | MaxEigenValue: 2.658 | MSE: 0.0001813 | vgg: 0.009193 | SSIM: 0.9962

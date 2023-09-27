@@ -1,0 +1,12 @@
+# comment: Hyperparams to generate this log file:
+# model: LeNet
+# dataset: MNIST
+# noise variance: 1e-5
+# regularization coefficient: 1
+# inv goal: sim (GS attack)
+
+JtDelta: 0.02241 | MaxEigenValue: 2.714 | ExactBound: 0.01687 | MSE: 0.0008682 | vgg: 0.04263 | SSIM: 0.9749
+JtDelta: 0.02579 | MaxEigenValue: 3.557 | ExactBound: 0.01855 | MSE: 0.0006526 | vgg: 0.01967 | SSIM: 0.9837
+JtDelta: 0.02639 | MaxEigenValue: 4.151 | ExactBound: 0.01826 | MSE: 0.0008203 | vgg: 0.09076 | SSIM: 0.9378
+JtDelta: 0.02408 | MaxEigenValue: 2.363 | ExactBound: 0.01775 | MSE: 0.0009332 | vgg: 0.02309 | SSIM: 0.985
+JtDelta: 0.02035 | MaxEigenValue: 2.658 | ExactBound: 0.01572 | MSE: 0.00104 | vgg: 0.03367 | SSIM: 0.9779
