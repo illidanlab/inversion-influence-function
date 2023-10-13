@@ -54,17 +54,7 @@ labels = torch.as_tensor((label,), device=setup['device'])
 ground_truth = img.to(**setup).unsqueeze(0)
 
 '''sample random noise from Gaussian distribution:'''
-loss = criterion(model(ground_truth), labels)
-input_gradient = torch.autograd.grad(loss, model.parameters())
-input_gradient = [grad.detach().clone() for grad in input_gradient]
-# flatten the gradient to a vector:
-flat_input_grad, _shape, _cum = flat_recover_vector(input_gradient, func='flat')
-# set std:
-std = np.sqrt(1e-4) * torch.ones_like(flat_input_grad.data).detach().clone()
-# sample noise:
-flat_noise = torch.normal(mean=0., std=std).to(**setup)
-# recover the flat noise to the same shape as the input_gradient
-noise = flat_recover_vector(flat_noise, func='recover', shapes=_shape, cumulated_num=_cum)
+noise = [torch.randn_like(param) for param in model.parameters()]
 
 '''calculate I2F and its lower bound:'''
 # compute I2F:
