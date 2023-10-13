@@ -19,6 +19,13 @@ Deep Gradient Leakage (DGL) is a highly effective attack that recovers private t
 ## Calculate I2F and its lower bound
 
 To calculate $I^2F$ or its lower bound (as defined in Eq. 4 and Eq. 5 in the paper, respectively), use the function `compute_exact_bound()` or `I2F_lb()` in `./utils.py`. Please check `./demo.py` for an example about how to use the function.
+```python
+import torch
+from utils import I2F_lb
+# get model, images, labels
+noise = [1e-2 * torch.randn_like(p) for p in model.parameters()]
+estimated_DGL_risk = I2F_lb(model, images, labels, noise)
+```
 
 *Note you don't need to really run the inversion process. Just input your model, data, and noise into the function, then you can easily get* $I^2F$ *or its lower bound.*
 
