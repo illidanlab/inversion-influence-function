@@ -16,7 +16,7 @@ Influence Functions" Haobo Zhang, [Junyuan Hong](https://jyhong.gitlab.io/), [Yu
 
 Deep Gradient Leakage (DGL) is a highly effective attack that recovers private training images from gradient vectors. This attack casts significant privacy challenges on distributed learning from clients with sensitive data, where clients are required to share gradients. Defending against such attacks requires but lacks an understanding of when and how privacy leakage happens, mostly because of the black-box nature of deep networks. In this paper, we propose a novel Inversion Influence Function ($I^2F$) that establishes a closed-form connection between the recovered images and the private gradients by implicitly solving the DGL problem. Compared to directly solving DGL, $I^2F$ is scalable for analyzing deep networks, requiring only oracle access to gradients and Jacobian-vector products. We empirically demonstrate that $I^2F$ effectively approximated the DGL generally on different model architectures, datasets, attack implementations, and noise-based defenses. With this novel tool, we provide insights into effective gradient perturbation directions, the unfairness of privacy protection, and privacy-preferred model initialization. Our codes are provided in https://github.com/illidanlab/inversion-influence-function.
 
-## Calculate I2F and its lower bound
+## Estimate DGL risks by I2F
 
 To calculate $I^2F$ or its lower bound (as defined in Eq. 4 and Eq. 5 in the paper, respectively), use the function `compute_exact_bound()` or `I2F_lb()` in `./utils.py`. Please check `./demo.py` for an example about how to use the function.
 ```python
@@ -29,13 +29,13 @@ estimated_DGL_risk = I2F_lb(model, images, labels, noise)
 
 *Note you don't need to really run the inversion process. Just input your model, data, and noise into the function, then you can easily get* $I^2F$ *or its lower bound.*
 
-## Package dependencies:
+## Package dependencies
 
 Use `conda env create -f environment.yml` to create a conda env and
 activate by `conda activate I2F`. Major dependencies include
 `pytorch, torchvision, wandb, numpy, lpips`.
 
-## Demos:
+## Demos
 Here we provide several demos of results in the paper.
 You can change the arguments `model` and `dataset` to plot the RMSE vs. I2F_lb curve for different models and datasets.
 
