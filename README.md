@@ -10,14 +10,14 @@ Influence Functions" Haobo Zhang, [Junyuan Hong](https://jyhong.gitlab.io/), [Yu
 [paper](https://arxiv.org/pdf/2309.13016.pdf) / [code](https://github.com/haobozhang/inversion-influence-function) / [blog](https://jyhong.gitlab.io/publication/2023neurips_i2f/)
 
 ## Overview
-Deep Gradient Leakage (DGL) is a highly effective attack that recovers private training images from gradient vectors.
-This attack casts significant privacy challenges on distributed learning from clients with sensitive data, where clients are required to share gradients.
-Defending against such attacks requires but lacks an understanding of *when and how privacy leakage happens*, mostly because of the black-box nature of deep networks.
-In this paper, we propose a novel Inversion Influence Function ($I^2F$) that establishes a closed-form connection between the recovered images and the private gradients by implicitly solving the DGL problem.
-Compared to directly solving DGL, $I^2F$ is scalable for analyzing deep networks, requiring only oracle access to gradients and Jacobian-vector products. %, which yields convenience in the privacy analysis of large models.
-We empirically demonstrate that I$^2$F effectively approximated the DGL generally on different model architectures, datasets, attack implementations, and noise-based defenses.
-With this novel tool, we provide insights into effective gradient perturbation directions, the unfairness of privacy protection, and privacy-preferred model initialization.
-Our codes are provided in https://github.com/illidanlab/inversion-influence-function.
+
+
+![featured](https://github.com/illidanlab/inversion-influence-function/assets/6964516/d724696d-eada-4641-b313-22ec676523e9)
+
+Deep Gradient Leakage (DGL) is a highly effective attack that recovers private training images from gradient vectors. This attack casts significant privacy challenges on distributed learning from clients with sensitive data, where clients are required to share gradients. Defending against such attacks requires but lacks an understanding of when and how privacy leakage happens, mostly because of the black-box nature of deep networks. In this paper, we propose a novel Inversion Influence Function (I
+F) that establishes a closed-form connection between the recovered images and the private gradients by implicitly solving the DGL problem. Compared to directly solving DGL, I
+F is scalable for analyzing deep networks, requiring only oracle access to gradients and Jacobian-vector products. We empirically demonstrate that I
+F effectively approximated the DGL generally on different model architectures, datasets, attack implementations, and noise-based defenses. With this novel tool, we provide insights into effective gradient perturbation directions, the unfairness of privacy protection, and privacy-preferred model initialization. Our codes are provided in https://github.com/illidanlab/inversion-influence-function.
 
 ## Calculate I2F and its lower bound
 
