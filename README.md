@@ -7,7 +7,7 @@ Official PyTorch Code for Paper: "Understanding Deep Gradient Leakage via Invers
 Influence Functions" Haobo Zhang, [Junyuan Hong](https://jyhong.gitlab.io/), [Yuyang Deng](https://sites.psu.edu/yuyangdeng/),
 [Mehrdad Mahdavi](https://www.cse.psu.edu/~mzm616/) and [Jiayu Zhou](https://jiayuzhou.github.io/), *NeurIPS* 2023.
 
-[paper](https://arxiv.org/pdf/2309.13016.pdf) / [code](https://github.com/haobozhang/inversion-influence-function) / [blog]([http://localhost:1313/publication/2023neurips_i2f/](https://jyhong.gitlab.io/publication/2023neurips_i2f/))
+[paper](https://arxiv.org/pdf/2309.13016.pdf) / [code](https://github.com/haobozhang/inversion-influence-function) / [blog](https://jyhong.gitlab.io/publication/2023neurips_i2f/)
 
 ## Overview
 Deep Gradient Leakage (DGL) is a highly effective attack that recovers private training images from gradient vectors.
